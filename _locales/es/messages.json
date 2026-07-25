@@ -1,0 +1,47 @@
+{
+  "extName": { "message": "Video Saver for X" },
+  "extDescription": { "message": "Guarda videos de X (antes Twitter)" },
+  "actionTitle": { "message": "Video Saver for X" },
+
+  "popupTitle": { "message": "Video Saver for X" },
+  "popupSubtitle": { "message": "Pega la URL de una publicación para guardar su video" },
+  "urlPlaceholder": { "message": "https://x.com/xxxx/status/1234567890" },
+  "fetchButton": { "message": "Buscar video" },
+
+  "statusFetching": { "message": "Obteniendo…" },
+  "statusInvalidUrl": { "message": "Introduce una URL de publicación válida" },
+  "statusCommError": { "message": "Error al comunicarse con la extensión" },
+  "statusFoundCount": {
+    "message": "Se encontraron $COUNT$ video(s)",
+    "placeholders": { "count": { "content": "$1", "example": "2" } }
+  },
+  "statusDownloadStarted": { "message": "Descarga iniciada" },
+  "statusDownloadFailed": { "message": "Error en la descarga" },
+
+  "videoGroupTitleSingle": { "message": "Elegir calidad" },
+  "videoGroupTitleMultiple": {
+    "message": "Video $INDEX$",
+    "placeholders": { "index": { "content": "$1", "example": "1" } }
+  },
+  "qualityStandard": { "message": "Calidad estándar" },
+  "qualityKbps": {
+    "message": "$BITRATE$ kbps",
+    "placeholders": { "bitrate": { "content": "$1", "example": "832" } }
+  },
+  "footerNote": { "message": "Solo se usan datos públicos de inserción (embed). No se pueden obtener publicaciones privadas o eliminadas." },
+
+  "saveButtonLabel": { "message": "⬇ Guardar" },
+  "saveButtonTitle": { "message": "Guardar video" },
+  "saveButtonFetching": { "message": "Obteniendo…" },
+  "saveButtonSaved": { "message": "Guardado" },
+  "saveButtonError": { "message": "Error" },
+  "saveButtonFailed": { "message": "Fallo" },
+
+  "errFetchFailed": {
+    "message": "No se pudo obtener información del video (status: $STATUS$)",
+    "placeholders": { "status": { "content": "$1", "example": "404" } }
+  },
+  "errNoVideoFound": { "message": "No se encontró ningún video en esta publicación" },
+  "errTombstone": { "message": "X restringe el acceso a esta publicación y no se puede obtener (podría estar marcada como sensible o tener visibilidad limitada)" },
+  "errNoDownloadableVideo": { "message": "No se encontró ningún video descargable" }
+}

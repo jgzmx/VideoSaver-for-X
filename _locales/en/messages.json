@@ -1,0 +1,47 @@
+{
+  "extName": { "message": "Video Saver for X" },
+  "extDescription": { "message": "Save videos from X (formerly Twitter)" },
+  "actionTitle": { "message": "Video Saver for X" },
+
+  "popupTitle": { "message": "Video Saver for X" },
+  "popupSubtitle": { "message": "Paste a post URL to save its video" },
+  "urlPlaceholder": { "message": "https://x.com/xxxx/status/1234567890" },
+  "fetchButton": { "message": "Find video" },
+
+  "statusFetching": { "message": "Fetching…" },
+  "statusInvalidUrl": { "message": "Please enter a valid post URL" },
+  "statusCommError": { "message": "Failed to communicate with the extension" },
+  "statusFoundCount": {
+    "message": "Found $COUNT$ video(s)",
+    "placeholders": { "count": { "content": "$1", "example": "2" } }
+  },
+  "statusDownloadStarted": { "message": "Download started" },
+  "statusDownloadFailed": { "message": "Download failed" },
+
+  "videoGroupTitleSingle": { "message": "Choose quality" },
+  "videoGroupTitleMultiple": {
+    "message": "Video $INDEX$",
+    "placeholders": { "index": { "content": "$1", "example": "1" } }
+  },
+  "qualityStandard": { "message": "Standard quality" },
+  "qualityKbps": {
+    "message": "$BITRATE$ kbps",
+    "placeholders": { "bitrate": { "content": "$1", "example": "832" } }
+  },
+  "footerNote": { "message": "This uses public embed data only. Private or deleted posts cannot be retrieved." },
+
+  "saveButtonLabel": { "message": "⬇ Save" },
+  "saveButtonTitle": { "message": "Save video" },
+  "saveButtonFetching": { "message": "Fetching…" },
+  "saveButtonSaved": { "message": "Saved" },
+  "saveButtonError": { "message": "Error" },
+  "saveButtonFailed": { "message": "Failed" },
+
+  "errFetchFailed": {
+    "message": "Failed to fetch video info (status: $STATUS$)",
+    "placeholders": { "status": { "content": "$1", "example": "404" } }
+  },
+  "errNoVideoFound": { "message": "No video was found in this post" },
+  "errTombstone": { "message": "This post is restricted by X and cannot be retrieved (may be flagged as sensitive or have limited visibility)" },
+  "errNoDownloadableVideo": { "message": "No downloadable video was found" }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Video Saver for X</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1 data-i18n="popupTitle">Video Saver for X</h1>
+      <p class="sub" data-i18n="popupSubtitle">Paste a post URL to save its video</p>
+    </header>
+
+    <form id="form">
+      <input
+        type="text"
+        id="urlInput"
+        data-i18n-placeholder="urlPlaceholder"
+        autocomplete="off"
+      />
+      <button type="submit" id="fetchBtn" data-i18n="fetchButton">Find video</button>
+    </form>
+
+    <div id="status" class="status"></div>
+    <div id="results" class="results"></div>
+
+    <footer>
+      <p data-i18n="footerNote">This uses public embed data only.</p>
+    </footer>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

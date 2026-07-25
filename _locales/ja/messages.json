@@ -1,0 +1,47 @@
+{
+  "extName": { "message": "Video Saver for X" },
+  "extDescription": { "message": "X(旧Twitter)の動画を保存" },
+  "actionTitle": { "message": "Video Saver for X" },
+
+  "popupTitle": { "message": "Video Saver for X" },
+  "popupSubtitle": { "message": "投稿のURLを貼り付けて動画を保存" },
+  "urlPlaceholder": { "message": "https://x.com/xxxx/status/1234567890" },
+  "fetchButton": { "message": "動画を探す" },
+
+  "statusFetching": { "message": "取得中…" },
+  "statusInvalidUrl": { "message": "投稿のURLを正しく入力してください" },
+  "statusCommError": { "message": "拡張機能との通信に失敗しました" },
+  "statusFoundCount": {
+    "message": "$COUNT$ 件の動画が見つかりました",
+    "placeholders": { "count": { "content": "$1", "example": "2" } }
+  },
+  "statusDownloadStarted": { "message": "ダウンロードを開始しました" },
+  "statusDownloadFailed": { "message": "ダウンロードに失敗しました" },
+
+  "videoGroupTitleSingle": { "message": "画質を選択" },
+  "videoGroupTitleMultiple": {
+    "message": "動画 $INDEX$",
+    "placeholders": { "index": { "content": "$1", "example": "1" } }
+  },
+  "qualityStandard": { "message": "標準画質" },
+  "qualityKbps": {
+    "message": "$BITRATE$ kbps",
+    "placeholders": { "bitrate": { "content": "$1", "example": "832" } }
+  },
+  "footerNote": { "message": "公開の埋め込み用データのみを利用しています。非公開・削除済みの投稿は取得できません。" },
+
+  "saveButtonLabel": { "message": "⬇ 保存" },
+  "saveButtonTitle": { "message": "動画を保存" },
+  "saveButtonFetching": { "message": "取得中…" },
+  "saveButtonSaved": { "message": "保存しました" },
+  "saveButtonError": { "message": "エラー" },
+  "saveButtonFailed": { "message": "失敗" },
+
+  "errFetchFailed": {
+    "message": "情報の取得に失敗しました (status: $STATUS$)",
+    "placeholders": { "status": { "content": "$1", "example": "404" } }
+  },
+  "errNoVideoFound": { "message": "この投稿には動画が見つかりませんでした" },
+  "errTombstone": { "message": "この投稿はXの制限により取得できません(センシティブ判定や公開範囲の制限の可能性があります)" },
+  "errNoDownloadableVideo": { "message": "ダウンロード可能な動画が見つかりませんでした" }
+}

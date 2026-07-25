@@ -1,0 +1,47 @@
+{
+  "extName": { "message": "Video Saver for X" },
+  "extDescription": { "message": "X(구 트위터)의 동영상 저장" },
+  "actionTitle": { "message": "Video Saver for X" },
+
+  "popupTitle": { "message": "Video Saver for X" },
+  "popupSubtitle": { "message": "게시물 URL을 붙여넣고 동영상을 저장하세요" },
+  "urlPlaceholder": { "message": "https://x.com/xxxx/status/1234567890" },
+  "fetchButton": { "message": "동영상 찾기" },
+
+  "statusFetching": { "message": "가져오는 중…" },
+  "statusInvalidUrl": { "message": "올바른 게시물 URL을 입력해주세요" },
+  "statusCommError": { "message": "확장 프로그램과 통신에 실패했습니다" },
+  "statusFoundCount": {
+    "message": "동영상 $COUNT$개를 찾았습니다",
+    "placeholders": { "count": { "content": "$1", "example": "2" } }
+  },
+  "statusDownloadStarted": { "message": "다운로드를 시작했습니다" },
+  "statusDownloadFailed": { "message": "다운로드에 실패했습니다" },
+
+  "videoGroupTitleSingle": { "message": "화질 선택" },
+  "videoGroupTitleMultiple": {
+    "message": "동영상 $INDEX$",
+    "placeholders": { "index": { "content": "$1", "example": "1" } }
+  },
+  "qualityStandard": { "message": "표준 화질" },
+  "qualityKbps": {
+    "message": "$BITRATE$ kbps",
+    "placeholders": { "bitrate": { "content": "$1", "example": "832" } }
+  },
+  "footerNote": { "message": "공개된 임베드용 데이터만 사용합니다. 비공개 또는 삭제된 게시물은 가져올 수 없습니다." },
+
+  "saveButtonLabel": { "message": "⬇ 저장" },
+  "saveButtonTitle": { "message": "동영상 저장" },
+  "saveButtonFetching": { "message": "가져오는 중…" },
+  "saveButtonSaved": { "message": "저장됨" },
+  "saveButtonError": { "message": "오류" },
+  "saveButtonFailed": { "message": "실패" },
+
+  "errFetchFailed": {
+    "message": "동영상 정보를 가져오지 못했습니다 (status: $STATUS$)",
+    "placeholders": { "status": { "content": "$1", "example": "404" } }
+  },
+  "errNoVideoFound": { "message": "이 게시물에서 동영상을 찾을 수 없습니다" },
+  "errTombstone": { "message": "이 게시물은 X의 제한으로 인해 가져올 수 없습니다(민감한 콘텐츠 판정 또는 공개 범위 제한 가능성)" },
+  "errNoDownloadableVideo": { "message": "다운로드 가능한 동영상을 찾을 수 없습니다" }
+}
