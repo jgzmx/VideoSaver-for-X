@@ -17,7 +17,7 @@ English | [日本語](README.ja.md)
 ## Installation
 
 1. Download and extract `VideoSaver-for-X.zip` from
-   [**Releases**](https://github.com/jgzmx/x-video-saver/releases/latest)
+   [**Releases**](https://github.com/jgzmx/VideoSaver-for-X/releases)
 2. Open your browser's extensions page and turn on "Developer mode"
    - Chrome: `chrome://extensions`
    - Brave: `brave://extensions`
