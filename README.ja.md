@@ -14,7 +14,7 @@ Vivaldi / Opera など、Chromium系ブラウザでも同様に動作します�
 
 ## インストール方法
 
-1. [**Releases**](https://github.com/jgzmx/x-video-saver/releases/latest) から `VideoSaver-for-X.zip` をダウンロードして展開
+1. [**Releases**](https://github.com/jgzmx/VideoSaver-for-X/releases) から `VideoSaver-for-X.zip` をダウンロードして展開
 2. ブラウザで拡張機能ページを開き、「デベロッパーモード」をON
    - Chrome: `chrome://extensions`
    - Brave: `brave://extensions`
