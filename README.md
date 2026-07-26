@@ -1,92 +1,103 @@
 # VideoSaver for X
 
-X(旧Twitter)の動画を保存するChrome拡張機能です。Brave / Edge /
-Vivaldi / Opera など、Chromium系ブラウザでも同様に動作します。
+A Chrome extension for saving videos from X (formerly Twitter) posts. Also
+works the same way on Chromium-based browsers such as Brave, Edge, Vivaldi,
+and Opera.
+
+English | [日本語](README.ja.md)
 
 > **Disclaimer**
-> このプロジェクトはX Corp.とは一切関係のない非公式・個人開発のツールです。
-> 動画の著作権は投稿者本人に帰属します。ダウンロードした動画の再配布・商用利用は
-> 推奨しません。利用は自己責任でお願いします。
-> X Corp.または権利者から削除依頼(takedown request)があった場合は速やかに対応します。
-> Issueまたは連絡先までご連絡ください。
+> This project is an unofficial, independently developed tool with no
+> affiliation to X Corp. Copyright of videos belongs to the original poster.
+> Redistributing or commercially using downloaded videos is not recommended.
+> Use at your own risk.
+> If X Corp. or a rights holder requests a takedown, it will be handled
+> promptly. Please contact us via an Issue or the contact info below.
 
-## インストール方法
+## Installation
 
-1. [**Releases**](https://github.com/jgzmx/x-video-saver/releases/latest) から `VideoSaver-for-X.zip` をダウンロードして展開
-2. ブラウザで拡張機能ページを開き、「デベロッパーモード」をON
+1. Download and extract `VideoSaver-for-X.zip` from
+   [**Releases**](https://github.com/jgzmx/x-video-saver/releases/latest)
+2. Open your browser's extensions page and turn on "Developer mode"
    - Chrome: `chrome://extensions`
    - Brave: `brave://extensions`
    - Edge: `edge://extensions`
-   - その他のChromium系ブラウザも同様のページがあります
-3. 「パッケージ化されていない拡張機能を読み込む」をクリックし、展開したフォルダ(`manifest.json`が直接入っているフォルダ)を選択
+   - Other Chromium-based browsers have a similar page
+3. Click "Load unpacked" and select the extracted folder (the one that
+   directly contains `manifest.json`)
 
-詳しい使い方は下の「使い方」を参照してください。
+See "Usage" below for details on how to use it.
 
-## 仕組み
+## How it works
 
-X が埋め込み表示(oEmbed)のために公開している syndication API
-(`cdn.syndication.twimg.com`)から動画のURLを取得します。ログイン情報や
-Cookieを使わず、誰でもアクセスできる公開エンドポイントのみを利用しています。
-ヘッダー偽装やレート制限の回避、認証情報の不正利用などは一切行っていません。
+The extension retrieves video URLs from the syndication API
+(`cdn.syndication.twimg.com`) that X publicly exposes for embed (oEmbed)
+display. It doesn't use any login credentials or cookies — only publicly
+accessible endpoints that anyone can reach. No header spoofing, rate-limit
+evasion, or misuse of authentication is performed.
 
-- 非公開(鍵垢)アカウントの投稿や削除済みの投稿は取得できません
-- 取得できるのは動画・GIFのみです(通常の画像投稿には対応していません)
-- 動画のダウンロード自体がX/Twitterの利用規約に抵触しないかは、利用者ご自身で
-  ご確認・ご判断ください
+- Posts from private (locked) accounts or deleted posts cannot be retrieved
+- Only videos and GIFs can be retrieved (regular image posts are not
+  supported)
+- Whether downloading videos itself violates X/Twitter's Terms of Service is
+  something you should check and judge for yourself
 
-## 対応言語
+## Supported languages
 
-ブラウザの表示言語に応じて自動で切り替わります(`chrome.i18n`)。
+The UI language switches automatically based on your browser's display
+language (`chrome.i18n`).
 
 - 日本語 (ja)
-- English (en) ※未対応言語のフォールバック
+- English (en) — fallback for unsupported languages
 - 한국어 (ko)
 - 简体中文 (zh_CN)
 - Español (es)
 
-他言語の翻訳の追加・修正はPull Requestで歓迎します。`_locales/<言語コード>/messages.json`
-を追加してください。
+Pull requests adding or improving translations are welcome. Add a
+`_locales/<language-code>/messages.json` file.
 
-## 開発者向け:ソースコードから読み込む場合
+## For developers: loading from source
 
-最新のコードを直接試したい場合や、コントリビュートする場合はこちら。
+Use this if you want to try the latest code directly or contribute.
 
-1. このリポジトリを `git clone` するか、「Code → Download ZIP」で取得
-2. ブラウザで拡張機能ページを開く(上記参照)
-3. 「デベロッパーモード」をオンにする
-4. 「パッケージ化されていない拡張機能を読み込む」をクリック
-5. `manifest.json` が直接入っているフォルダを選択する
+1. `git clone` this repository, or get it via "Code → Download ZIP"
+2. Open your browser's extensions page (see above)
+3. Turn on "Developer mode"
+4. Click "Load unpacked"
+5. Select the folder that directly contains `manifest.json`
 
-## 使い方
+## Usage
 
-### 方法1: タイムライン上のボタン
-x.com / twitter.com を開くと、動画付きの投稿に「⬇ 保存」ボタンが表示されます。
-クリックすると自動的に最高画質のmp4をダウンロードします。
+### Method 1: Timeline button
+When you open x.com / twitter.com, a "⬇ Save" button appears on posts that
+contain a video. Clicking it automatically downloads the highest-quality
+mp4.
 
-### 方法2: ポップアップ
-ツールバーの拡張機能アイコンをクリックし、投稿のURLを貼り付けて
-「動画を探す」を押すと、利用可能な画質の一覧が表示されるので
-好きな画質を選んでダウンロードできます。
+### Method 2: Popup
+Click the extension icon in the toolbar, paste a post URL, and click "Find
+video" to see a list of available qualities — pick the one you want to
+download.
 
-## ファイル構成
+## File structure
 
-- `manifest.json` - 拡張機能の設定(Manifest V3)
-- `background.js` - 動画情報の取得・ダウンロード処理
-- `content.js` / `content.css` - タイムライン上の保存ボタン
-- `popup.html` / `popup.js` / `popup.css` - ポップアップUI
-- `i18n.js` - 多言語対応の共通処理
-- `_locales/` - 各言語の翻訳データ
-- `LICENSE` - MITライセンス
+- `manifest.json` - Extension configuration (Manifest V3)
+- `background.js` - Fetches video info and handles downloads
+- `content.js` / `content.css` - Timeline save button
+- `popup.html` / `popup.js` / `popup.css` - Popup UI
+- `i18n.js` - Shared localization logic
+- `_locales/` - Translation data for each language
+- `LICENSE` - MIT License
 
-## ライセンス
+## License
 
-MIT License. 詳細は [LICENSE](./LICENSE) を参照してください。
+MIT License. See [LICENSE](./LICENSE) for details.
 
-## クレジット
+## Credits
 
-このプロジェクトのコード生成にはClaude(Anthropic)の支援を利用しています。
+Claude (Anthropic) was used to help generate the code for this project.
 
-## 削除依頼・お問い合わせ
+## Takedown requests / Contact
 
-権利者・X Corp.関係者の方で削除等のご依頼がある場合は、GitHubのIssueにてご連絡ください。
-確認の上、速やかに対応します。
+Rights holders or X Corp. representatives who wish to request a takedown or
+similar action can reach out via a GitHub Issue. We will respond and act
+promptly.
